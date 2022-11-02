@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.bab748ed.css",
-    "main.js": "/static/js/main.127c55ff.js",
-    "static/media/wait.svg": "/static/media/wait.6a9ae4c51562c3754b53123e9634878c.svg",
-    "static/media/done.svg": "/static/media/done.04b400db40cb835a967afb18bcb822b6.svg",
-    "index.html": "/index.html",
-    "main.bab748ed.css.map": "/static/css/main.bab748ed.css.map",
-    "main.127c55ff.js.map": "/static/js/main.127c55ff.js.map"
+    "main.css": "/never91veup/react-todo-mindbox/static/css/main.bab748ed.css",
+    "main.js": "/never91veup/react-todo-mindbox/static/js/main.3194650c.js",
+    "static/media/wait.svg": "/never91veup/react-todo-mindbox/static/media/wait.6a9ae4c51562c3754b53123e9634878c.svg",
+    "static/media/done.svg": "/never91veup/react-todo-mindbox/static/media/done.04b400db40cb835a967afb18bcb822b6.svg",
+    "index.html": "/never91veup/react-todo-mindbox/index.html",
+    "main.bab748ed.css.map": "/never91veup/react-todo-mindbox/static/css/main.bab748ed.css.map",
+    "main.3194650c.js.map": "/never91veup/react-todo-mindbox/static/js/main.3194650c.js.map"
   },
   "entrypoints": [
     "static/css/main.bab748ed.css",
-    "static/js/main.127c55ff.js"
+    "static/js/main.3194650c.js"
   ]
 }
