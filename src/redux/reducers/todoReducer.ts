@@ -1,6 +1,5 @@
 import { v4 as uuid } from "uuid";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import {log} from "util";
 
 interface Todo {
     id: string;
@@ -12,14 +11,14 @@ interface TodoState {
     todos: Todo[];
     activeTodos: Todo[];
     completedTodos: Todo[];
-    currentList: Todo[];
+    currentTodos: Todo[];
 }
 
 const initialState: TodoState = {
     todos: [],
     activeTodos: [],
     completedTodos: [],
-    currentList: [],
+    currentTodos: [],
 };
 
 const todoSlice = createSlice({
@@ -34,7 +33,7 @@ const todoSlice = createSlice({
             };
             state.todos.push(newTodo);
             state.activeTodos.push(newTodo);
-            state.currentList = state.todos;
+            state.currentTodos = state.todos;
         },
         setCompleted(state, action: PayloadAction<string>) {
             const todo = state.todos.find((todo) => todo.id === action.payload);
@@ -54,7 +53,7 @@ const todoSlice = createSlice({
                     state.activeTodos.push(todo);
                 }
             }
-            const currentTodo = state.currentList.find(
+            const currentTodo = state.currentTodos.find(
                 (todo) => todo.id === action.payload
             );
             if (currentTodo) {
@@ -62,13 +61,13 @@ const todoSlice = createSlice({
             }
         },
         showAll(state) {
-            state.currentList = state.todos;
+            state.currentTodos = state.todos;
         },
         showActive(state) {
-            state.currentList = state.activeTodos;
+            state.currentTodos = state.activeTodos;
         },
         showCompleted(state) {
-            state.currentList = state.completedTodos;
+            state.currentTodos = state.completedTodos;
         },
         clearCompleted(state) {
             state.completedTodos.length = 0;
@@ -78,7 +77,7 @@ const todoSlice = createSlice({
             );
 
             state.activeTodos = [...state.todos];
-            state.currentList = state.todos;
+            state.currentTodos = state.todos;
         },
     },
 });

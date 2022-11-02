@@ -14,7 +14,7 @@ import {
 
 const App: React.FC = () => {
     const dispatch = useAppDispatch();
-    const { todos, currentList } = useAppSelector((state) => state.todos);
+    const { todos, currentTodos } = useAppSelector((state) => state.todos);
 
     const activeItems = todos.filter((todo) => todo.completed === false);
 
@@ -23,7 +23,7 @@ const App: React.FC = () => {
             <header className="header__title">todos</header>
             <div className="content-wrapper">
                 <Input />
-                <List todos={currentList} />
+                <List todos={currentTodos} />
                 {todos.length !== 0 && (
                     <Footer
                         itemsCount={activeItems.length}
