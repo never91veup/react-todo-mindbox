@@ -24,9 +24,12 @@
     background-color: rgb(249, 249, 249);
     color: rgb(113, 113, 113);
 
+    &:hover {
+      color: red;
+    }
+
     &:focus {
-      border: 1px solid rgba(255, 105, 105, 0.415);
-      border-radius: 5px;
+      color: red;
     }
 
     @media (max-width: 576px) {
